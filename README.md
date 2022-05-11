@@ -3,7 +3,8 @@ Text generation with Recurrent Neural Networks. We train a Recurrent Neural Netw
 
 ## Things to-do 
 
-* Decide on the vocabulary to use.
+* ~~Decide on the vocabulary to use.~~ Chosen vocab: 
+Clickbait titles from The Examiner (extracted from https://www.kaggle.com/datasets/therohk/examine-the-examiner?resource=download)
 * Decide on cloud provider to deploy model.
 * Code 
   * Build training module
