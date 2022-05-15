@@ -1,4 +1,3 @@
-# TODO: Import the data (stored in the data folder)
 import functools
 from abc import ABC, abstractmethod
 import pandas as pd
@@ -28,7 +27,6 @@ class DatasetCreator(ABC):
 
         :returns str String containing all distinct chars
         """
-
         distinct_chars_per_sentence = list(map(lambda s: set(s), self.data))
         return ''.join(functools.reduce(lambda x, y: x.union(y), distinct_chars_per_sentence))
 
@@ -41,5 +39,3 @@ class DatasetFromCsv(DatasetCreator):
         """
         df = pd.read_csv(self.path_to_data_source, quotechar='"').dropna()
         self.data = df['headline_text'].values
-
-
