@@ -18,3 +18,5 @@ class Test(TestCase):
         self.assertEqual(torch.equal(sentence_to_tensor('eric', letters), eric_tensor), True)
 
 
+class TestLSTM(TestCase):
+    pass
