@@ -20,3 +20,8 @@ class Test(TestCase):
 
 class TestLSTM(TestCase):
     pass
+
+
+class TestModel(TestCase):
+    def test_forward_pass(self):
+        self.fail()
