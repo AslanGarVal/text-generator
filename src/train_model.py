@@ -103,7 +103,7 @@ class Model(nn.Module):
         self.lstm_output_to_input = nn.Linear(hidden_lstm_size, hidden_size)
         self.sigmoid = nn.Sigmoid()
         self.final_output_layer = nn.Linear(hidden_size, final_output_size)
-        self.softmax = nn.Softmax()
+        self.softmax = nn.Softmax(dim=-1)
 
     def forward_pass(self, x_input, hidden, cell_state):
         lstm_output, hidden, cell_state = self.lstm_unit.forward_pass(x_input, hidden, cell_state)
@@ -115,4 +115,7 @@ class Model(nn.Module):
 
 # TODO: Implement loss function
 # TODO: Implement training routine (simple gradient descent)
+    def train(self, X, y):
+        pass
+
 # TODO: Export model
